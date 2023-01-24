@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Navbar & Tabs</title>
+
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
+
+</head>
+<body>
+  <div class="container">
+  <section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <h3 class="mb-5">Login</h3>
+            <form id="login-form">
+            <div class="form-outline mb-2">
+              <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="admin"/>
+              <label class="form-label" for="typeEmailX-2">Username</label>
+            </div>
+
+            <div class="form-outline mb-2">
+              <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="admin" />
+              <label class="form-label" for="typePasswordX-2">Password</label>
+            </div>
+
+
+            <button class="btn btn-primary btn-lg btn-block" type="submit" id="login-button" onclick="login()">Login</button>
+
+            <hr class="my-2">
+
+            <a href="register.html" class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;">Register</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   <footer class="footer mt-auto py-3 bg-light">
+  <div class="container" style="width: auto;
+  max-width: 680px;
+  padding: 0 15px;">
+    <span class="text-muted">Develop By Reski Junaidi Shalat STT-NF @2022</span>
+  </div>
+</footer>
+</div>
+</body>
+<script src="assets/plugins/jquery/jquery.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="assets/dist/js/adminlte.min.js"></script>
+
+<script type="text/javascript">
+  const loginForm = document.getElementById("login-form");
+  function login(){
+      event.preventDefault();
+      const username = loginForm.username.value;
+      const password = loginForm.password.value;
+
+      if (username == "admin" && password == "admin") {
+          alert("login berhasil");
+          window.location = "admin/car.html";
+      } else {
+          alert("username / password salah");
+      }
+  }
+</script>
+</html>
